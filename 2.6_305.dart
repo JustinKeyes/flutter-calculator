@@ -111,6 +111,12 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                 _buildButton('+'),
               ],
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                _buildButton('%'),
+              ],
+            ),
           ],
         ),
       ),
@@ -123,4 +129,13 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
       child: Text(value, style: TextStyle(fontSize: 24)),
     );
   }
+  
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Simple Calculator',
+      home: CalculatorScreen(),
+    );
+  }
 }
+
